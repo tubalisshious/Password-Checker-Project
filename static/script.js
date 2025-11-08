@@ -90,4 +90,21 @@ checkBtn.addEventListener("click", () => {
     li.textContent = item;
     feedbackList.appendChild(li);
   });
+
+  // Bar fill: map score (0-6) -> percent 0-100
+  const percent = Math.round((data.score / 6) * 100);
+  let color;
+  if(data.score <= 2) color = getComputedStyle(document.documentElement).getPropertyValue('--bad');
+  else if(data.score <= 4) color = getComputedStyle(document.documentElement).getPropertyValue('--warn');
+  else color = getComputedStyle(document.documentElement).getPropertyValue('--good');
+
+  setBar(percent, color);
+
+  // setBar(Math.min(100, Math.round(data.entropy)), colorForEntropy(data.entropy));
+});
+
+// allow Enter key to trigger check
+passwordInput.addEventListener('keydown', (e)=>{
+  if(e.key === 'Enter') checkBtn.click();
+
 });
