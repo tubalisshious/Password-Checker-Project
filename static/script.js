@@ -47,11 +47,10 @@ checkBtn.addEventListener('click', async () => {
 
   setBar(percent, color);
 
-  // If you prefer entropy coloring:
   // setBar(Math.min(100, Math.round(data.entropy)), colorForEntropy(data.entropy));
 });
 
-// Optional: allow Enter key to trigger check
+// allow Enter key to trigger check
 passwordInput.addEventListener('keydown', (e)=>{
   if(e.key === 'Enter') checkBtn.click();
 });
