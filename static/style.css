@@ -1,91 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #e8f0ff, #ffffff);
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #2b1055, #7597de);
   height: 100vh;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin: 0;
-  color: #222;
+  color: #fff;
 }
 
 .container {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.1);
   padding: 30px 40px;
-  border-radius: 16px;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
   width: 400px;
   text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
   margin-bottom: 20px;
-  color: #333;
 }
 
 .input-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  position: relative;
+  margin-bottom: 15px;
 }
 
 input[type="password"],
 input[type="text"] {
   width: 100%;
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  padding: 12px 50px 12px 15px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
 }
 
-.toggle {
-  font-size: 13px;
-  color: #555;
+.toggle-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #4a4a8a;
+  border: none;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 button {
-  background: #4CAF50;
-  color: white;
+  background-color: #6a11cb;
   border: none;
-  padding: 10px 18px;
-  font-size: 14px;
-  border-radius: 8px;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 10px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s;
+  font-size: 16px;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background: #3e9142;
+  background: #2575fc;
 }
 
-.result {
-  margin-top: 20px;
+pre {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
   text-align: left;
-}
-
-#strengthLabel {
-  font-size: 18px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li {
-  background: #f5f5f5;
-  padding: 6px 10px;
-  margin: 4px 0;
-  border-radius: 6px;
-  font-size: 13px;
-}
-
-footer {
-  margin-top: 20px;
-  font-size: 12px;
-  color: #777;
+  white-space: pre-wrap;
+  font-size: 14px;
+  margin-top: 15px;
 }

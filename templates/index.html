@@ -4,28 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Password Strength Checker</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="static/style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>🔒 Password Strength Checker</h1>
+    <h1>Password Strength Checker</h1>
     <div class="input-group">
-      <input type="password" id="passwordInput" placeholder="Enter your password" />
-      <label class="toggle">
-        <input type="checkbox" id="showPassword" />
-        Show Password
-      </label>
-      <button id="checkBtn">Check Strength</button>
+      <input type="password" id="password" placeholder="Enter your password" />
+      <button id="togglePassword" class="toggle-btn">Show</button>
     </div>
-
-    <div class="result">
-      <h2 id="strengthLabel"></h2>
-      <ul id="feedbackList"></ul>
-    </div>
+    <button onclick="checkStrength()">Check Strength</button>
+    <pre id="result"></pre>
   </div>
-
-  <footer>Developed using HTML, CSS & JS</footer>
-
-  <script src="script.js"></script>
+  <script src="static/script.js"></script>
 </body>
 </html>
