@@ -1,39 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Password Strength Checker</title>
-  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="card">
-    <h1>🔐 Password Strength Checker</h1>
-    <p class="subtitle">Type a password and click <strong>Check</strong>. No passwords are stored.</p>
-
-    <div class="form-row">
-      <input id="passwordInput" type="password" placeholder="Enter password" />
-      <button id="checkBtn">Check</button>
+  <div class="container">
+    <h1>🔒 Password Strength Checker</h1>
+    <div class="input-group">
+      <input type="password" id="passwordInput" placeholder="Enter your password" />
+      <label class="toggle">
+        <input type="checkbox" id="showPassword" />
+        Show Password
+      </label>
+      <button id="checkBtn">Check Strength</button>
     </div>
 
     <div class="result">
-      <div class="strength-row">
-        <div id="strengthLabel">Strength: —</div>
-        <div id="entropyLabel">Entropy: — bits</div>
-      </div>
-
-      <div class="bar-bg">
-        <div id="strengthBar" class="bar"></div>
-      </div>
-
-      <ul id="feedbackList" class="feedback"></ul>
-    </div>
-
-    <div class="notes">
-      <small>Entropy is an estimate of password unpredictability. Higher is better.</small>
+      <h2 id="strengthLabel"></h2>
+      <ul id="feedbackList"></ul>
     </div>
   </div>
 
-  <script src="/static/script.js"></script>
+  <footer>Developed using HTML, CSS & JS</footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
